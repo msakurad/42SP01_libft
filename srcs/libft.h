@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:58:41 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/05 14:25:04 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:36:54 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,8 @@ int		ft_atoi(const char *nptr);
 // #include <stdlib.h>
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+
+// PART 2
+
 
 #endif

@@ -10,11 +10,12 @@ void	tearDown(void)
 
 int	main(void)
 {
-	printf("\n----------------\n\n");
-	printf("test_ft_isalpha\n\n");
-	run_test_ft_isalpha();
-	printf("\n----------------\n\n");
-	printf("test_ft_isdigit\n\n");
-	run_test_ft_isdigit();
+	RUN_FT_TEST(ft_isalpha)
+	RUN_FT_TEST(ft_isdigit)
+	RUN_FT_TEST(ft_isprint)
+	RUN_FT_TEST(ft_isascii)
+	RUN_FT_TEST(ft_isprint)
+	RUN_FT_TEST(ft_strlen)
+	//RUN_FT_TEST(ft_memset)
 	return (0);
 }
