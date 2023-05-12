@@ -27,6 +27,7 @@ void	run_test_ft_isprint(void);
 void	run_test_ft_strlen(void);
 void	run_test_ft_memset(void);
 void	run_test_ft_bzero(void);
+void	run_test_ft_memcpy(void);
 
 // PART 2
 
