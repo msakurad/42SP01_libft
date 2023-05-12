@@ -16,6 +16,6 @@ int	main(void)
 	RUN_FT_TEST(ft_isascii)
 	RUN_FT_TEST(ft_isprint)
 	RUN_FT_TEST(ft_strlen)
-	//RUN_FT_TEST(ft_memset)
+	RUN_FT_TEST(ft_memset)
 	return (0);
 }

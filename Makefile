@@ -19,7 +19,9 @@ LIBFT = libft.h
 TARGET = test_all.c
 TEST_OUT = a.out
 
-SRC_FILES_PART1 = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
+SRC_FILES_PART1 = *.c
+# ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
+
 SRCS = $(addprefix $(PATH_SRC),$(SRC_FILES_PART1))
 TEST_FILES = $(addprefix test_,$(SRC_FILES_PART1))
 TESTS = $(addprefix $(PATH_TEST),$(TEST_FILES))
@@ -31,7 +33,11 @@ TESTS = $(addprefix $(PATH_TEST),$(TEST_FILES))
 all: $(NAME)
 
 $(NAME):
-	cc $(CCFLAGS) $(SRCS) $(PATH_TEST)$(TARGET) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	./$(TEST_OUT)
+
+ft_memset.c:
+	cc $(CCFLAGS) $(PATH_SRC)$@ $(PATH_TEST)test_$@ $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT)
 
 clean:

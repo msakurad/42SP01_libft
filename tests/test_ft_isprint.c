@@ -3,7 +3,7 @@
 void	test_ft_isprint_ftvslibc_true(void)
 {
 	printf("cmp ft %d vs lib %d\n", ft_isprint('A'), isprint('A'));
-	TEST_IGNORE_MESSAGE("teste ft vs lib fail -> return 2 x 1024");
+	TEST_IGNORE_MESSAGE("teste ft vs lib fail -> return 1 x 16384");
 	TEST_ASSERT(isprint('A') == ft_isprint('A'));
 
 }

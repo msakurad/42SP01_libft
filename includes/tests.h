@@ -17,6 +17,7 @@
 	printf("\ntest_%s\n\n", #ftname); \
 	run_test_##ftname();
 
+
 // PART 1
 
 void	run_test_ft_isalpha(void);
