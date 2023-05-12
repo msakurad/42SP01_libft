@@ -10,12 +10,13 @@ void	tearDown(void)
 
 int	main(void)
 {
-	RUN_FT_TEST(ft_isalpha)
-	RUN_FT_TEST(ft_isdigit)
-	RUN_FT_TEST(ft_isprint)
-	RUN_FT_TEST(ft_isascii)
-	RUN_FT_TEST(ft_isprint)
-	RUN_FT_TEST(ft_strlen)
-	RUN_FT_TEST(ft_memset)
+	RUN_FT_TEST(01, ft_isalpha)
+	RUN_FT_TEST(02, ft_isdigit)
+	RUN_FT_TEST(03, ft_isprint)
+	RUN_FT_TEST(04, ft_isascii)
+	RUN_FT_TEST(05, ft_isprint)
+	RUN_FT_TEST(06, ft_strlen)
+	RUN_FT_TEST(07, ft_memset)
+	RUN_FT_TEST(08, ft_bzero)
 	return (0);
 }

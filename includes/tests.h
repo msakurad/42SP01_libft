@@ -7,19 +7,18 @@
 # include "unity_internals.h"
 # include <stdio.h>
 # include <string.h>
+# include <strings.h>
 # include <ctype.h>
 
 //# define CREATE_FT_TEST(ftname) void	run_test_##ftname(void);
 //CREATE_FT_TEST(isalpha)
 
-#define RUN_FT_TEST(ftname) \
+#define RUN_FT_TEST(id, ftname) \
 	printf("\n----------------\n\n"); \
-	printf("\ntest_%s\n\n", #ftname); \
+	printf("\n\033[1;36mTESTE N%s: test_%s\033[0m\n\n", #id, #ftname); \
 	run_test_##ftname();
 
-
 // PART 1
-
 void	run_test_ft_isalpha(void);
 void	run_test_ft_isdigit(void);
 void	run_test_ft_isalnum(void);
@@ -27,6 +26,11 @@ void	run_test_ft_isascii(void);
 void	run_test_ft_isprint(void);
 void	run_test_ft_strlen(void);
 void	run_test_ft_memset(void);
+void	run_test_ft_bzero(void);
+
+// PART 2
+
+// BONUS
 
 // enum test_list
 // {

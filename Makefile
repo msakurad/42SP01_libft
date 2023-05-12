@@ -36,7 +36,7 @@ $(NAME):
 	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT)
 
-ft_memset.c:
+ft_%.c:
 	cc $(CCFLAGS) $(PATH_SRC)$@ $(PATH_TEST)test_$@ $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT)
 
