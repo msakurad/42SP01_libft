@@ -28,6 +28,7 @@ void	run_test_ft_strlen(void);
 void	run_test_ft_memset(void);
 void	run_test_ft_bzero(void);
 void	run_test_ft_memcpy(void);
+void	run_test_ft_memmove(void);
 
 // PART 2
 

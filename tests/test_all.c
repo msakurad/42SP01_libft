@@ -19,5 +19,6 @@ int	main(void)
 	RUN_FT_TEST(07, ft_memset)
 	RUN_FT_TEST(08, ft_bzero)
 	RUN_FT_TEST(09, ft_memcpy)
+	RUN_FT_TEST(10, ft_memmove)
 	return (0);
 }
