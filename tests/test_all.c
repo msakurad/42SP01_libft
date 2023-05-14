@@ -20,5 +20,6 @@ int	main(void)
 	RUN_FT_TEST(08, ft_bzero)
 	RUN_FT_TEST(09, ft_memcpy)
 	RUN_FT_TEST(10, ft_memmove)
+	RUN_FT_TEST(11, ft_strlcpy)
 	return (0);
 }

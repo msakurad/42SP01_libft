@@ -7,6 +7,7 @@
 # include "unity_internals.h"
 # include <stdio.h>
 # include <string.h>
+//# include <bsd/strings.h>
 # include <strings.h>
 # include <ctype.h>
 
@@ -29,6 +30,7 @@ void	run_test_ft_memset(void);
 void	run_test_ft_bzero(void);
 void	run_test_ft_memcpy(void);
 void	run_test_ft_memmove(void);
+void	run_test_ft_strlcpy(void);
 
 // PART 2
 

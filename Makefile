@@ -37,7 +37,7 @@ $(NAME):
 	./$(TEST_OUT)
 
 ft_%.c:
-	cc $(CCFLAGS) $(PATH_SRC)$@ $(PATH_TEST)test_$@ $(UNITY) $(INCLUDE_PATHS)
+	cc $(CCFLAGS) $(PATH_SRC)$@ $(PATH_TEST)test_$@ $(UNITY) $(INCLUDE_PATHS) -lbsd
 	./$(TEST_OUT)
 
 clean:

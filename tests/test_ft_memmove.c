@@ -44,7 +44,7 @@ void	test_ft_memmove_ftvslibc_overlapsrcgreaterthandest_undefined(void)
 	memmove(str_lib, &str_lib[4],7);
 	ft_memmove(str_ft, &str_ft[4],7);
 	printf("\nDepois cmp ft %s vs lib %s\n\n", str_ft, str_lib);
-	TEST_IGNORE_MESSAGE("teste ft vs lib overlap -> return undefined");
+	//TEST_IGNORE_MESSAGE("teste ft vs lib overlap -> return undefined");
 	TEST_ASSERT_EQUAL_STRING(str_lib, str_ft);
 }
 
@@ -54,15 +54,15 @@ no mesmo endereço de memória.
 */
 void	test_ft_memmove_ftvslibc_overlapdestgreaterthansrc_undefined(void)
 {
-	char str_lib[50] = "palha com batata";
-	char str_ft[50] = "palha com batata";
+	char str_lib[50] = "abcdefghijklmno";
+	char str_ft[50] = "abcdefghijklmno";
 
 	printf("\nAntes dest ft %s vs lib %s\n", str_ft, str_lib);
 	printf("src=str[2] dest=str[5], n = 7\n");
 	memmove(&str_lib[5], &str_lib[2],7);
 	ft_memmove(&str_ft[5], &str_ft[2],7);
 	printf("\nDepois cmp ft %s vs lib %s\n\n", str_ft, str_lib);
-	TEST_IGNORE_MESSAGE("teste ft vs lib overlap -> return undefined");
+	//TEST_IGNORE_MESSAGE("teste ft vs lib overlap -> return undefined");
 	TEST_ASSERT_EQUAL_STRING(str_lib, str_ft);
 }
 
@@ -74,18 +74,12 @@ void	test_ft_memmove_ftvslibc_intarraynormalconditions_true(void)
 
 	printf("\nTeste com array tipo int em condições normais\n");
 	printf("\nsrc = {1,2,3} e n = 3\n");
-	printf("\nAntes arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
-	printf("\nAntes arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
-	printf("\nAntes arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
-	printf("\nAntes arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
-	printf("\nAntes arr[4] ft %d, lib %d\n", arr_ft[4], arr_lib[4]);
+	printf("\nAntes: arr_ft %d, %d, %d, %d, %d", arr_ft[0], arr_ft[1], arr_ft[2], arr_ft[3], arr_ft[4]);
+	printf("\nAntes: arr_lib %d, %d, %d, %d, %d", arr_lib[0], arr_lib[1], arr_lib[2], arr_lib[3], arr_lib[4]);
 	ft_memmove(arr_ft, src, 3*sizeof(int));
 	memmove(arr_lib, src, 3*sizeof(int));
-	printf("\nDepois arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
-	printf("\nDepois arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
-	printf("\nDepois arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
-	printf("\nDepois arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
-	printf("\nDepois arr[4] ft %d, lib %d\n\n", arr_ft[4], arr_lib[4]);
+	printf("\nDepois: arr_ft %d, %d, %d, %d, %d", arr_ft[0], arr_ft[1], arr_ft[2], arr_ft[3], arr_ft[4]);
+	printf("\nDepois: arr_lib %d, %d, %d, %d, %d", arr_lib[0], arr_lib[1], arr_lib[2], arr_lib[3], arr_lib[4]);
 }
 
 void	test_ft_memmove_ftvslibc_intarrayoverlaparrayitself_undefined(void)
@@ -94,19 +88,13 @@ void	test_ft_memmove_ftvslibc_intarrayoverlaparrayitself_undefined(void)
 	int	arr_lib[5] = {3, 2, 5, 7, 1};
 
 	printf("\nTeste com array tipo int dando overlapping\n");
-	printf("\nsrc = arr[0]+3 e n = 5\n");
-	printf("\nAntes arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
-	printf("\nAntes arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
-	printf("\nAntes arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
-	printf("\nAntes arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
-	printf("\nAntes arr[4] ft %d, lib %d\n", arr_ft[4], arr_lib[4]);
-	ft_memmove(&arr_ft[2], arr_ft, 5*sizeof(int));
-	memmove(&arr_lib[2], arr_lib, 5*sizeof(int));
-	printf("\nDepois arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
-	printf("\nDepois arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
-	printf("\nDepois arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
-	printf("\nDepois arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
-	printf("\nDepois arr[4] ft %d, lib %d\n\n", arr_ft[4], arr_lib[4]);
+	printf("\nsrc = arr[0] e dest = arr[2] e n = 3\n");
+	printf("\nAntes: arr_ft %d, %d, %d, %d, %d", arr_ft[0], arr_ft[1], arr_ft[2], arr_ft[3], arr_ft[4]);
+	printf("\nAntes: arr_lib %d, %d, %d, %d, %d", arr_lib[0], arr_lib[1], arr_lib[2], arr_lib[3], arr_lib[4]);
+	ft_memmove(arr_ft, &arr_ft[2], 3*sizeof(int));
+	memmove(arr_lib, &arr_lib[2], 3*sizeof(int));
+	printf("\nDepois: arr_ft %d, %d, %d, %d, %d", arr_ft[0], arr_ft[1], arr_ft[2], arr_ft[3], arr_ft[4]);
+	printf("\nDepois: arr_lib %d, %d, %d, %d, %d", arr_lib[0], arr_lib[1], arr_lib[2], arr_lib[3], arr_lib[4]);
 }
 
 void	run_test_ft_memmove(void)
@@ -117,20 +105,20 @@ void	run_test_ft_memmove(void)
 	RUN_TEST(test_ft_memmove_ftvslibc_overlapdestgreaterthansrc_undefined);
 	RUN_TEST(test_ft_memmove_ftvslibc_overlapsrcgreaterthandest_undefined);
 	RUN_TEST(test_ft_memmove_ftvslibc_intarraynormalconditions_true);
-	//RUN_TEST(test_ft_memmove_ftvslibc_intarrayoverlaparrayitself_undefined);
+	RUN_TEST(test_ft_memmove_ftvslibc_intarrayoverlaparrayitself_undefined);
 	UNITY_END();
 }
 
-void	setUp(void)
-{
-}
+// void	setUp(void)
+// {
+// }
 
-void	tearDown(void)
-{
-}
+// void	tearDown(void)
+// {
+// }
 
-int	main(void)
-{
-	RUN_FT_TEST(00, ft_memmove)
-	return (0);
-}
+// int	main(void)
+// {
+// 	RUN_FT_TEST(00, ft_memmove)
+// 	return (0);
+// }

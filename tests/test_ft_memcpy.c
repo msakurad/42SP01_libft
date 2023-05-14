@@ -121,16 +121,16 @@ void	run_test_ft_memcpy(void)
 	UNITY_END();
 }
 
-void	setUp(void)
-{
-}
+// void	setUp(void)
+// {
+// }
 
-void	tearDown(void)
-{
-}
+// void	tearDown(void)
+// {
+// }
 
-int	main(void)
-{
-	RUN_FT_TEST(00, ft_memcpy)
-	return (0);
-}
+// int	main(void)
+// {
+// 	RUN_FT_TEST(00, ft_memcpy)
+// 	return (0);
+// }
