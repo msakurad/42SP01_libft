@@ -27,5 +27,7 @@ int	main(void)
 	RUN_FT_TEST(15, ft_strchr)
 	RUN_FT_TEST(16, ft_strrchr)
 	RUN_FT_TEST(17, ft_strncmp)
+	RUN_FT_TEST(18, ft_memchr)
+	RUN_FT_TEST(19, ft_memcmp)
 	return (0);
 }

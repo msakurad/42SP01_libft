@@ -32,10 +32,10 @@ void	test_ft_memset_ftvslibc_whennisgreaterthanarray_undefined(void)
 	char str_ft[3];
 	char str_lib[3];
 
+	TEST_IGNORE_MESSAGE("teste quando n > o tamanho do array");
 	ft_memset(str_ft, 'A', 5);
 	memset(str_lib, 'A', 5);
 	printf("\ncmp ft %s vs lib %s\n", str_ft, str_lib);
-	TEST_IGNORE_MESSAGE("teste quando n > o tamanho do array");
 	TEST_ASSERT_EQUAL_STRING(str_lib, str_ft);
 }
 

@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:58:41 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/14 23:48:30 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/15 14:53:44 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,5 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
 // PART 2
-
 
 #endif

@@ -37,6 +37,8 @@ void	run_test_ft_tolower(void);
 void	run_test_ft_strchr(void);
 void	run_test_ft_strrchr(void);
 void	run_test_ft_strncmp(void);
+void	run_test_ft_memchr(void);
+void	run_test_ft_memcmp(void);
 
 // PART 2
 

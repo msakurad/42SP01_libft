@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 00:22:07 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/15 14:31:28 by msakurad         ###   ########.fr       */
+/*   Created: 2023/05/15 15:01:29 by msakurad          #+#    #+#             */
+/*   Updated: 2023/05/15 15:42:09 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	count;
-	int	last_ocurrence;
+	unsigned char	*s1_char;
+	unsigned char	*s2_char;
 
-	count = 0;
-	last_ocurrence = -1;
-	while (s[count])
+	if (n == 0)
+		return (0);
+	s1_char = (unsigned char *)s1;
+	s2_char = (unsigned char *)s2;
+	while (*s1_char == *s2_char && n--)
 	{
-		if (s[count] == c)
-			last_ocurrence = count;
-		count++;
+		s1_char++;
+		s2_char++;
 	}
-	if (c == 0)
-		return ((char *)s + count);
-	else if (last_ocurrence >= 0)
-		return ((char *)s + last_ocurrence);
-	return (NULL);
+	return (*s1_char - *s2_char);
 }

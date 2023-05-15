@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 00:22:07 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/15 14:31:28 by msakurad         ###   ########.fr       */
+/*   Created: 2023/05/15 14:32:38 by msakurad          #+#    #+#             */
+/*   Updated: 2023/05/15 15:41:50 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	count;
-	int	last_ocurrence;
+	unsigned char	*s_char;
+	unsigned char	c_char;
 
-	count = 0;
-	last_ocurrence = -1;
-	while (s[count])
-	{
-		if (s[count] == c)
-			last_ocurrence = count;
-		count++;
-	}
-	if (c == 0)
-		return ((char *)s + count);
-	else if (last_ocurrence >= 0)
-		return ((char *)s + last_ocurrence);
+	s_char = (unsigned char *)s;
+	c_char = (unsigned char)c;
+	while (*s_char != c_char && n--)
+		s_char++;
+	if (*s_char == c_char)
+		return ((void *)s_char);
 	return (NULL);
 }

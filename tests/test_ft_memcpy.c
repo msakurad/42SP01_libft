@@ -88,26 +88,26 @@ void	test_ft_memcpy_ftvslibc_intarraynormalconditions_true(void)
 	printf("\nDepois arr[4] ft %d, lib %d\n\n", arr_ft[4], arr_lib[4]);
 }
 
-void	test_ft_memcpy_ftvslibc_intarrayoverlaparrayitself_undefined(void)
-{
-	int	arr_ft[5] = {3, 2, 5, 7, 1};
-	int	arr_lib[5] = {3, 2, 5, 7, 1};
+// void	test_ft_memcpy_ftvslibc_intarrayoverlaparrayitself_undefined(void)
+// {
+// 	int	arr_ft[5] = {3, 2, 5, 7, 1};
+// 	int	arr_lib[5] = {3, 2, 5, 7, 1};
 
-	printf("\nTeste com array tipo int dando overlapping\n");
-	printf("\nsrc = arr[0]+3 e n = 5\n");
-	printf("\nAntes arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
-	printf("\nAntes arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
-	printf("\nAntes arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
-	printf("\nAntes arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
-	printf("\nAntes arr[4] ft %d, lib %d\n", arr_ft[4], arr_lib[4]);
-	ft_memcpy(&arr_ft[2], arr_ft, 5*sizeof(int));
-	memcpy(&arr_lib[2], arr_lib, 5*sizeof(int));
-	printf("\nDepois arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
-	printf("\nDepois arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
-	printf("\nDepois arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
-	printf("\nDepois arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
-	printf("\nDepois arr[4] ft %d, lib %d\n\n", arr_ft[4], arr_lib[4]);
-}
+// 	printf("\nTeste com array tipo int dando overlapping\n");
+// 	printf("\nsrc = arr[0]+3 e n = 4\n");
+// 	printf("\nAntes arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
+// 	printf("\nAntes arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
+// 	printf("\nAntes arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
+// 	printf("\nAntes arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
+// 	printf("\nAntes arr[4] ft %d, lib %d\n", arr_ft[4], arr_lib[4]);
+// 	ft_memcpy(&arr_ft[2], arr_ft, 4*sizeof(int));
+// 	memcpy(&arr_lib[2], arr_lib, 4*sizeof(int));
+// 	printf("\nDepois arr[0] ft %d, lib %d", arr_ft[0], arr_lib[0]);
+// 	printf("\nDepois arr[1] ft %d, lib %d", arr_ft[1], arr_lib[1]);
+// 	printf("\nDepois arr[2] ft %d, lib %d", arr_ft[2], arr_lib[2]);
+// 	printf("\nDepois arr[3] ft %d, lib %d", arr_ft[3], arr_lib[3]);
+// 	printf("\nDepois arr[4] ft %d, lib %d\n\n", arr_ft[4], arr_lib[4]);
+// }
 
 void	run_test_ft_memcpy(void)
 {
