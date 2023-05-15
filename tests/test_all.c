@@ -24,6 +24,8 @@ int	main(void)
 	// RUN_FT_TEST(12, ft_strlcat)
 	RUN_FT_TEST(13, ft_toupper)
 	RUN_FT_TEST(14, ft_tolower)
-	RUN_FT_TEST(15;ft_strchr)
+	RUN_FT_TEST(15, ft_strchr)
+	RUN_FT_TEST(16, ft_strrchr)
+	RUN_FT_TEST(17, ft_strncmp)
 	return (0);
 }
