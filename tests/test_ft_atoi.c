@@ -35,16 +35,6 @@ void	test_ft_atoi_ftvslibc_true(void)
 
 }
 
-// void	test_ft_atoi_cmponly3chars_true(void)
-// {
-// 	char	*str1;
-// 	char	*str2;
-
-// 	str1 = "abcdefghi";
-// 	str2 = "abcdhfghi";
-// 	TEST_ASSERT_EQUAL_INT(0, ft_atoi(str1));
-// }
-
 void	run_test_ft_atoi(void)
 {
 	UNITY_BEGIN();
@@ -52,16 +42,16 @@ void	run_test_ft_atoi(void)
 	UNITY_END();
 }
 
-void	setUp(void)
-{
-}
+// void	setUp(void)
+// {
+// }
 
-void	tearDown(void)
-{
-}
+// void	tearDown(void)
+// {
+// }
 
-int	main(void)
-{
-	RUN_FT_TEST(00, ft_atoi)
-	return (0);
-}
+// int	main(void)
+// {
+// 	RUN_FT_TEST(00, ft_atoi)
+// 	return (0);
+// }

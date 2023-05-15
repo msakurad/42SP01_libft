@@ -31,5 +31,6 @@ int	main(void)
 	RUN_FT_TEST(19, ft_memcmp)
 	RUN_FT_TEST(20, ft_strnstr)
 	RUN_FT_TEST(21, ft_atoi)
+	RUN_FT_TEST(22, ft_calloc)
 	return (0);
 }
