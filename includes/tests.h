@@ -34,6 +34,7 @@ void	run_test_ft_strlcpy(void);
 void	run_test_ft_strlcat(void);
 void	run_test_ft_toupper(void);
 void	run_test_ft_tolower(void);
+void	run_test_ft_strchr(void);
 
 // PART 2
 
