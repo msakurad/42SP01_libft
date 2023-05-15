@@ -10,6 +10,7 @@
 //# include <bsd/strings.h>
 # include <strings.h>
 # include <ctype.h>
+# include <limits.h>
 
 //# define CREATE_FT_TEST(ftname) void	run_test_##ftname(void);
 //CREATE_FT_TEST(isalpha)
@@ -39,6 +40,8 @@ void	run_test_ft_strrchr(void);
 void	run_test_ft_strncmp(void);
 void	run_test_ft_memchr(void);
 void	run_test_ft_memcmp(void);
+void	run_test_ft_strnstr(void);
+void	run_test_ft_atoi(void);
 
 // PART 2
 
