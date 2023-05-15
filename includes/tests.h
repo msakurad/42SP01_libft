@@ -31,6 +31,9 @@ void	run_test_ft_bzero(void);
 void	run_test_ft_memcpy(void);
 void	run_test_ft_memmove(void);
 void	run_test_ft_strlcpy(void);
+void	run_test_ft_strlcat(void);
+void	run_test_ft_toupper(void);
+void	run_test_ft_tolower(void);
 
 // PART 2
 
