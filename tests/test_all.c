@@ -10,6 +10,7 @@ void	tearDown(void)
 
 int	main(void)
 {
+	// Part 1	
 	RUN_FT_TEST(01, ft_isalpha)
 	RUN_FT_TEST(02, ft_isdigit)
 	RUN_FT_TEST(03, ft_isprint)
@@ -32,5 +33,8 @@ int	main(void)
 	RUN_FT_TEST(20, ft_strnstr)
 	RUN_FT_TEST(21, ft_atoi)
 	RUN_FT_TEST(22, ft_calloc)
+	
+	// Part 2
+	RUN_FT_TEST(23, ft_substr)
 	return (0);
 }

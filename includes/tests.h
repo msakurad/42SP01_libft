@@ -44,6 +44,7 @@ void	run_test_ft_strnstr(void);
 void	run_test_ft_atoi(void);
 void	run_test_ft_calloc(void);
 void	run_test_ft_strdup(void);
+void	run_test_ft_substr(void);
 
 // PART 2
 

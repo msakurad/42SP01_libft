@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 17:14:11 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/16 15:13:14 by msakurad         ###   ########.fr       */
+/*   Created: 2023/05/16 14:35:28 by msakurad          #+#    #+#             */
+/*   Updated: 2023/05/16 15:29:44 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	n;
-	int	flag_minus;
+	char	*sub_s;
+	size_t	s_len;
 
-	n = 0;
-	flag_minus = 1;
-	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
-		nptr++;
-	if (*nptr == '-')
-	{
-		flag_minus -= 2;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		n = n * 10 + (int)(*nptr) - 48;
-		nptr++;
-	}
-	return (n * flag_minus);
+	s_len = ft_strlen(s);
+	if (len > __INT_MAX__ || len + (size_t)start > s_len)
+		return (NULL);
+	sub_s = (char *)malloc(sizeof(char) * (len + 1));
+	ft_strlcpy(sub_s, &s[start], len + 1);
+	return (sub_s);
 }
