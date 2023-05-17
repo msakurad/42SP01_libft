@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:58:41 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/15 20:43:36 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/16 20:54:30 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 // PART 1
 // #include <ctype.h>

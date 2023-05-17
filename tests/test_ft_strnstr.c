@@ -20,9 +20,9 @@ void	test_ft_strnstr_littlefound_returnsfirstocurrence(void)
 
 	big = "abcdefghi";
 	little = "def";
-	printf("\nbig=\"%s\" little=\"%s\" n=3\n", big, little);
+	printf("\nbig=\"%s\" little=\"%s\" n=6\n", big, little);
 	//TEST_IGNORE_MESSAGE("teste ft vs lib fail -> return 1 x 8");
-	TEST_ASSERT_EQUAL_STRING(&big[3], ft_strnstr(big, little, 3));
+	TEST_ASSERT_EQUAL_STRING(&big[3], ft_strnstr(big, little, 6));
 
 }
 
@@ -59,6 +59,16 @@ void	test_ft_strnstr_littleistotallydifferentnotfound_returnsnull(void)
 	TEST_ASSERT_EQUAL_STRING(NULL, ft_strnstr(big, little, 3));
 }
 
+void	test_ft_strnstr_littleisinbigbutlenisshort_returnsnull(void)
+{
+	char	*big;
+	char	*little;
+
+	big = "abcdefghi";
+	little = "def";
+	TEST_ASSERT_EQUAL_STRING(NULL, ft_strnstr(big, little, 3));
+}
+
 void	test_ft_strnstr_littlenotfound_onechardifferent_returnsnull(void)
 {
 	char	*big;
@@ -92,16 +102,16 @@ void	run_test_ft_strnstr(void)
 	UNITY_END();
 }
 
-// void	setUp(void)
-// {
-// }
+void	setUp(void)
+{
+}
 
-// void	tearDown(void)
-// {
-// }
+void	tearDown(void)
+{
+}
 
-// int	main(void)
-// {
-// 	RUN_FT_TEST(00, ft_strnstr)
-// 	return (0);
-// }
+int	main(void)
+{
+	RUN_FT_TEST(00, ft_strnstr)
+	return (0);
+}

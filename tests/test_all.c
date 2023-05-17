@@ -37,5 +37,6 @@ int	main(void)
 	// Part 2
 	RUN_FT_TEST(23, ft_substr)
 	RUN_FT_TEST(24, ft_strjoin)
+	RUN_FT_TEST(25, ft_strtrim)
 	return (0);
 }
