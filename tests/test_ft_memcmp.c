@@ -22,11 +22,23 @@ void	test_ft_memcmp_cmponly3chars_true(void)
 	TEST_ASSERT_EQUAL_INT(0, ft_memcmp(str1, str2, 3));
 }
 
+void	test_ft_memcmp_numbers_true(void)
+{
+	int	arr1[4] = {-128, 0, 127, 0};
+	int	arr2[4] = {-128, 0, 127, 0};
+	int	res;
+
+	res = ft_memcmp(arr1, arr2, 4);
+	printf("ft_memcmp: %d\n", res);
+	TEST_ASSERT_EQUAL_INT(0, res);
+}
+
 void	run_test_ft_memcmp(void)
 {
 	UNITY_BEGIN();
 	RUN_TEST(test_ft_memcmp_ftvslibc_true);
 	RUN_TEST(test_ft_memcmp_cmponly3chars_true);
+	RUN_TEST(test_ft_memcmp_numbers_true);
 	UNITY_END();
 }
 
