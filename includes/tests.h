@@ -17,8 +17,10 @@
 
 #define RUN_FT_TEST(id, ftname) \
 	printf("\n----------------\n\n"); \
-	printf("\n\033[1;36mTESTE N%s: test_%s\033[0m\n\n", #id, #ftname); \
-	run_test_##ftname();
+	printf("\n\033[1;36mTESTE N%s: %s\033[0m\n\n", #id, #ftname); \
+	run_##ftname();
+
+void	run_test_ft(int enum_test);
 
 // PART 1
 void	run_test_ft_isalpha(void);
@@ -52,12 +54,45 @@ void	run_test_ft_strtrim(void);
 
 // BONUS
 
-// enum test_list
-// {
-
-// };
-
-
+enum Tests
+{
+	// Part 1
+	Tests_ft_isalpha = 1,
+	Tests_ft_isdigit,
+	Tests_ft_isalnum,
+	Tests_ft_isascii,
+	Tests_ft_isprint,
+	Tests_ft_strlen,
+	Tests_ft_memset,
+	Tests_ft_bzero,
+	Tests_ft_memcpy,
+	Tests_ft_memmove,
+	Tests_ft_strlcpy,
+	Tests_ft_strlcat,
+	Tests_ft_toupper,
+	Tests_ft_tolower,
+	Tests_ft_strchr,
+	Tests_ft_strrchr,
+	Tests_ft_strncmp,
+	Tests_ft_memchr,
+	Tests_ft_memcmp,
+	Tests_ft_strnstr,
+	Tests_ft_atoi,
+	Tests_ft_calloc,
+	Tests_ft_strdup,
+	// Part 2
+	Tests_ft_substr,
+	Tests_ft_strjoin,
+	Tests_ft_strtrim,
+	Tests_ft_split,
+	Tests_ft_itoa,
+	Tests_ft_strmapi,
+	Tests_ft_striteri,
+	Tests_ft_putchar_fd,
+	Tests_ft_putstr_fd,
+	Tests_ft_putendl_fd,
+	Tests_ft_putnbr_fd
+};
 
 #endif
 

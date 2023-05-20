@@ -5,6 +5,7 @@ void	test_ft_calloc_ftvslibc_normalconditions_true(void)
 	char *str;
 
 	str = (char *)ft_calloc(4, sizeof(char));
+	printf("str %s\n", str);
 	TEST_IGNORE_MESSAGE("testes não feitos");
 }
 

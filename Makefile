@@ -40,6 +40,14 @@ ft_%.c:
 	cc $(CCFLAGS) $(SRCS) $(PATH_TEST)test_$@ $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT)
 
+p1:
+	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	./$(TEST_OUT) $@
+
+p2:
+	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	./$(TEST_OUT) $@
+
 clean:
 	rm -rf $(TEST) $(PATH_BUILD_OBJ) $(PATH_BUILD_RES)
 
