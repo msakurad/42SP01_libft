@@ -48,6 +48,14 @@ p2:
 	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT) $@
 
++%:
+	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	./$(TEST_OUT) $@
+
+# ft_%:
+# 	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+# 	./$(TEST_OUT) $@
+
 clean:
 	rm -rf $(TEST) $(PATH_BUILD_OBJ) $(PATH_BUILD_RES)
 

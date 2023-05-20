@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 00:22:07 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/15 14:31:28 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/20 02:28:05 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	last_ocurrence = -1;
 	while (s[count])
 	{
-		if (s[count] == c)
+		if (s[count] == (unsigned char)c)
 			last_ocurrence = count;
 		count++;
 	}
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		return ((char *)s + count);
 	else if (last_ocurrence >= 0)
 		return ((char *)s + last_ocurrence);

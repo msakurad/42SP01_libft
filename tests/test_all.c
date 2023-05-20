@@ -17,6 +17,7 @@ int	main(int argc, char **argv)
 	int	count;
 
 	test_part_argv = (char *)malloc(sizeof(char) * 30);
+	count = 1;
 	if (argc > 1)
 		strcpy(test_part_argv, argv[1]);
 	if (!strcmp(test_part_argv, "p1"))
@@ -35,8 +36,19 @@ int	main(int argc, char **argv)
 		test_last = Tests_ft_putnbr_fd;
 	}
 	nbr_tests = test_last - test_first;
-	count = 1;
-	printf("nbr %d\n", nbr_tests);
+	if (atoi(test_part_argv))
+	{
+		count = 0;
+		nbr_tests = count;
+		test_first = atoi(test_part_argv);
+	}
+	// if (strstr(test_part_argv, "ft_"))
+	// {
+	// 	count = 0;
+	// 	nbr_tests = count;
+	// 	test_first = (enum Tests)(strcat("Tests_", test_part_argv));
+	// }
+	// printf("nbr %d\n", nbr_tests);
 	// run_test_ft(1);
 	while (count <= nbr_tests)
 	{

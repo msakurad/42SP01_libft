@@ -18,8 +18,8 @@ void	test_ft_strncmp_cmponly3chars_true(void)
 	char	*str1;
 	char	*str2;
 
-	str1 = "abcdefghi";
-	str2 = "abcdhfghi";
+	str1 = "1234";
+	str2 = "1235";
 	TEST_ASSERT_EQUAL_INT(0, ft_strncmp(str1, str2, 3));
 }
 

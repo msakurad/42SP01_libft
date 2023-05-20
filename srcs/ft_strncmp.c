@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 01:33:17 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/15 02:06:39 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/20 03:06:41 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 && *s2 && *s1 == *s2 && n--)
+	if (n == 0)
+		return (0);
+	while (*s1 && *s2 && *s1 == *s2 && --n)
 	{
 		s1++;
 		s2++;
