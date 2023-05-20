@@ -63,9 +63,9 @@ void	test_ft_strnstr_littleisinbigbutlenisshort_returnsnull(void)
 	char	*big;
 	char	*little;
 
-	big = "abcdefghi";
-	little = "def";
-	TEST_ASSERT_EQUAL_STRING(NULL, ft_strnstr(big, little, 3));
+	big = "aaabcabcd";
+	little = "cd";
+	TEST_ASSERT_EQUAL_STRING(NULL, ft_strnstr(big, little, 8));
 }
 
 void	test_ft_strnstr_littlenotfound_onechardifferent_returnsnull(void)
@@ -75,7 +75,7 @@ void	test_ft_strnstr_littlenotfound_onechardifferent_returnsnull(void)
 
 	big = "abcdefghi";
 	little = "defx";
-	TEST_ASSERT_EQUAL_STRING(NULL, ft_strnstr(big, little, 4));
+	TEST_ASSERT_EQUAL_STRING(NULL, ft_strnstr(big, little, 6));
 }
 
 void	test_ft_strnstr_nisbiggerthanbigandlittle_returnsnull(void)

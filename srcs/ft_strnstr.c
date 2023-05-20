@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:57:38 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/17 16:02:50 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/20 09:45:32 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		c_little = 0;
 		while (little[c_little])
 		{
-			if (big[c_big + c_little] != little[c_little])
+			if (big[c_big + c_little] != little[c_little] || c_big + c_little > len - 1)
 				break ;
 			c_little++;
 		}
