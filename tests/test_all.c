@@ -42,14 +42,6 @@ int	main(int argc, char **argv)
 		nbr_tests = count;
 		test_first = atoi(test_part_argv);
 	}
-	// if (strstr(test_part_argv, "ft_"))
-	// {
-	// 	count = 0;
-	// 	nbr_tests = count;
-	// 	test_first = (enum Tests)(strcat("Tests_", test_part_argv));
-	// }
-	// printf("nbr %d\n", nbr_tests);
-	// run_test_ft(1);
 	while (count <= nbr_tests)
 	{
 		run_test_ft((int)test_first + count);
@@ -143,9 +135,9 @@ void	run_test_ft(int enum_test)
 	case 26:
 		RUN_FT_TEST(26, test_ft_strtrim)
 		break;
-	// case 27:
-	// 	RUN_FT_TEST(27, test_ft_split)
-	// 	break;
+	case 27:
+		RUN_FT_TEST(27, test_ft_split)
+		break;
 	// case 28:
 	// 	RUN_FT_TEST(28, test_ft_itoa)
 	// 	break;
