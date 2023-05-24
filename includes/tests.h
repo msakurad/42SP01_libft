@@ -50,6 +50,7 @@ void	run_test_ft_substr(void);
 void	run_test_ft_strjoin(void);
 void	run_test_ft_strtrim(void);
 void	run_test_ft_split(void);
+void	run_test_ft_itoa(void);
 
 // PART 2
 
