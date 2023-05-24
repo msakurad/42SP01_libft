@@ -22,6 +22,14 @@ void	test_ft_memcmp_cmponly3chars_true(void)
 	TEST_ASSERT_EQUAL_INT(0, ft_memcmp(str1, str2, 3));
 }
 
+void	test_ft_memcmp_stringarray_true(void)
+{
+	char	str1[] = {-128, 0, 127, -1};
+	char	str2[] = {-128, 0, 127, 0};
+
+	TEST_ASSERT_EQUAL_INT(0, ft_memcmp(str1, str2, 3));
+}
+
 void	test_ft_memcmp_numbers_true(void)
 {
 	int	arr1[4] = {-128, 0, 127, 0};
@@ -38,20 +46,7 @@ void	run_test_ft_memcmp(void)
 	UNITY_BEGIN();
 	RUN_TEST(test_ft_memcmp_ftvslibc_true);
 	RUN_TEST(test_ft_memcmp_cmponly3chars_true);
+	RUN_TEST(test_ft_memcmp_stringarray_true);
 	RUN_TEST(test_ft_memcmp_numbers_true);
 	UNITY_END();
 }
-
-// void	setUp(void)
-// {
-// }
-
-// void	tearDown(void)
-// {
-// }
-
-// int	main(void)
-// {
-// 	RUN_FT_TEST(00, ft_memcmp)
-// 	return (0);
-// }

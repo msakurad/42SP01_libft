@@ -156,9 +156,9 @@ void	run_test_ft(int enum_test)
 	// case 33:
 	// 	RUN_FT_TEST(33, test_ft_putendl_fd)
 	// 	break;
-	// case 34:
-	// 	RUN_FT_TEST(34, test_ft_putnbr_fd)
-	// 	break;
+	case 34:
+		RUN_FT_TEST(34, test_ft_putnbr_fd)
+		break;
 
 	default:
 		printf("Check again the argument passed in the terminal\n");

@@ -52,6 +52,10 @@ void	run_test_ft_strtrim(void);
 void	run_test_ft_split(void);
 void	run_test_ft_itoa(void);
 
+
+
+void	run_test_ft_putnbr_fd(void);
+
 // PART 2
 
 // BONUS

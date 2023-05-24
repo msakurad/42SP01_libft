@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 15:01:29 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/24 01:36:12 by msakurad         ###   ########.fr       */
+/*   Created: 2023/05/23 23:13:17 by msakurad          #+#    #+#             */
+/*   Updated: 2023/05/24 01:01:38 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	const unsigned char	*s1_char;
-	const unsigned char	*s2_char;
+static int	ft_abs(int n);
 
-	if (n == 0)
-		return (0);
-	s1_char = (const unsigned char *)s1;
-	s2_char = (const unsigned char *)s2;
-	while (*s1_char == *s2_char && --n)
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n < 0)
 	{
-		s1_char++;
-		s2_char++;
+		ft_putchar_fd('-', fd);
+		if (n != -1)
+			ft_putnbr_fd(ft_abs(n / 10), fd);
 	}
-	return (*s1_char - *s2_char);
+	if (n / 10 > 0)
+		ft_putnbr_fd(ft_abs(n / 10), fd);
+	ft_putchar_fd(ft_abs(n % 10) + '0', fd);
+}
+
+static int	ft_abs(int n)
+{
+	if (n < 0)
+		return (n * -1);
+	return (n);
 }
