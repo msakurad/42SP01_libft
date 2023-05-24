@@ -46,6 +46,8 @@ void	run_test_ft_strnstr(void);
 void	run_test_ft_atoi(void);
 void	run_test_ft_calloc(void);
 void	run_test_ft_strdup(void);
+
+// PART 2
 void	run_test_ft_substr(void);
 void	run_test_ft_strjoin(void);
 void	run_test_ft_strtrim(void);
@@ -56,7 +58,6 @@ void	run_test_ft_itoa(void);
 
 void	run_test_ft_putnbr_fd(void);
 
-// PART 2
 
 // BONUS
 
