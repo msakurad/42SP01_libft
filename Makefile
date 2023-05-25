@@ -48,6 +48,10 @@ p2:
 	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT) $@
 
+bonus:
+	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	./$(TEST_OUT) $@
+
 +%:
 	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT) $@

@@ -55,11 +55,12 @@ void	run_test_ft_split(void);
 void	run_test_ft_itoa(void);
 
 
-
 void	run_test_ft_putnbr_fd(void);
 
 
 // BONUS
+void	run_test_ft_lstnew_bonus(void);
+
 
 enum Tests
 {
@@ -98,7 +99,17 @@ enum Tests
 	Tests_ft_putchar_fd,
 	Tests_ft_putstr_fd,
 	Tests_ft_putendl_fd,
-	Tests_ft_putnbr_fd
+	Tests_ft_putnbr_fd,
+	// BONUS
+	Tests_ft_lstnew_bonus,
+	Tests_ft_lstadd_front_bonus,
+	Tests_ft_lstsize_bonus,
+	Tests_ft_lstlast_bonus,
+	Tests_ft_lstadd_back_bonus,
+	Tests_ft_lstdelone_bonus,
+	Tests_ft_lstclear_bonus,
+	Tests_ft_lstiter_bonus,
+	Tests_ft_lstmap_bonus
 };
 
 #endif

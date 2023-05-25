@@ -30,6 +30,11 @@ int	main(int argc, char **argv)
 		test_first = Tests_ft_substr;
 		test_last = Tests_ft_putnbr_fd;
 	}
+	else if (!strcmp(test_part_argv, "bonus"))
+	{
+		test_first = Tests_ft_lstnew_bonus;
+		test_last = Tests_ft_lstmap_bonus;
+	}
 	else
 	{
 		test_first = Tests_ft_isalpha;
@@ -63,7 +68,7 @@ void	run_test_ft(int enum_test)
 		RUN_FT_TEST(02, test_ft_isdigit)
 		break;
 	case 3:
-		RUN_FT_TEST(03, test_ft_isprint)
+		RUN_FT_TEST(03, test_ft_isalnum)
 		break;
 	case 4:
 		RUN_FT_TEST(04, test_ft_isascii)
@@ -159,7 +164,9 @@ void	run_test_ft(int enum_test)
 	case 34:
 		RUN_FT_TEST(34, test_ft_putnbr_fd)
 		break;
-
+	case 35:
+		RUN_FT_TEST(35, test_ft_lstnew_bonus)
+		break;
 	default:
 		printf("Check again the argument passed in the terminal\n");
 		break;
