@@ -9,6 +9,7 @@ void	test_ft_lstnew_bonus_createnewnode(void)
 	new = ft_lstnew(str);
 	printf("str: %s \nnew->content: %s\n", str, (char *)new->content);
 	TEST_ASSERT_EQUAL_STRING("toto", new->content);
+	free(new);
 }
 
 void	run_test_ft_lstnew_bonus(void)

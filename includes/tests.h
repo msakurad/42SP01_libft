@@ -60,7 +60,10 @@ void	run_test_ft_putnbr_fd(void);
 
 // BONUS
 void	run_test_ft_lstnew_bonus(void);
-
+void	run_test_ft_lstadd_front_bonus(void);
+void	run_test_ft_lstsize_bonus(void);
+void	run_test_ft_lstlast_bonus(void);
+void	run_test_ft_lstadd_back_bonus(void);
 
 enum Tests
 {

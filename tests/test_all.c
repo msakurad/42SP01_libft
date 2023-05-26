@@ -167,6 +167,18 @@ void	run_test_ft(int enum_test)
 	case 35:
 		RUN_FT_TEST(35, test_ft_lstnew_bonus)
 		break;
+	case 36:
+		RUN_FT_TEST(36, test_ft_lstadd_front_bonus)
+		break;
+	case 37:
+		RUN_FT_TEST(37, test_ft_lstsize_bonus)
+		break;
+	case 38:
+		RUN_FT_TEST(38, test_ft_lstlast_bonus)
+		break;
+	case 39:
+		RUN_FT_TEST(39, test_ft_lstadd_back_bonus)
+		break;
 	default:
 		printf("Check again the argument passed in the terminal\n");
 		break;
