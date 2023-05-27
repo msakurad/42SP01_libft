@@ -53,9 +53,12 @@ void	run_test_ft_strjoin(void);
 void	run_test_ft_strtrim(void);
 void	run_test_ft_split(void);
 void	run_test_ft_itoa(void);
-
+void	run_test_ft_strmapi(void);
 
 void	run_test_ft_putnbr_fd(void);
+
+// PART 2 auxiliary functions
+char	f_changechr(unsigned int i, char c);
 
 
 // BONUS
@@ -66,7 +69,7 @@ void	run_test_ft_lstlast_bonus(void);
 void	run_test_ft_lstadd_back_bonus(void);
 void	run_test_ft_lstdelone_bonus(void);
 
-//BONUS auxiliary functions
+// BONUS auxiliary functions
 t_list	*add_link(t_list *list, void *content);
 typedef void (*delptr)(void *);
 void del_lstcontent(void *content);

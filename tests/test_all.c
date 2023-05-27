@@ -146,9 +146,9 @@ void	run_test_ft(int enum_test)
 	case 28:
 		RUN_FT_TEST(28, test_ft_itoa)
 		break;
-	// case 29:
-	// 	RUN_FT_TEST(29, test_ft_strmapi)
-	// 	break;
+	case 29:
+		RUN_FT_TEST(29, test_ft_strmapi)
+		break;
 	// case 30:
 	// 	RUN_FT_TEST(30, test_ft_striteri)
 	// 	break;
