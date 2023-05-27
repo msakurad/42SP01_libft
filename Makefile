@@ -7,7 +7,7 @@ PATH_TEST = ./tests/
 PATH_BUILD_OBJ = ./build/objs
 PATH_BUILD_RES = ./build/results
 BUILD_PATHS = $(PATH_BUILD_OBJ) $(PATH_BUILD_RES)
-INCLUDE_PATHS = -I $(PATH_INCLUDE) -I $(PATH_UNITY) -I $(PATH_SRC)
+INCLUDE_PATHS = -I $(PATH_INCLUDE) -I $(PATH_UNITY) -I $(PATH_SRC) -I $(PATH_TEST)
 
 CCFLAGS = -Wall -Werror -Wextra
 COMPILE = cc -c
@@ -49,11 +49,11 @@ p2:
 	./$(TEST_OUT) $@
 
 bonus:
-	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	cc $(CCFLAGS) $(SRCS) $(TESTS) ./tests/testaux*.c $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT) $@
 
 +%:
-	cc $(CCFLAGS) $(SRCS) $(TESTS) $(UNITY) $(INCLUDE_PATHS)
+	cc $(CCFLAGS) $(SRCS) $(TESTS) ./tests/testaux*.c $(UNITY) $(INCLUDE_PATHS)
 	./$(TEST_OUT) $@
 
 # ft_%:

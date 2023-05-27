@@ -179,6 +179,9 @@ void	run_test_ft(int enum_test)
 	case 39:
 		RUN_FT_TEST(39, test_ft_lstadd_back_bonus)
 		break;
+	case 40:
+		RUN_FT_TEST(40, test_ft_lstdelone_bonus)
+		break;
 	default:
 		printf("Check again the argument passed in the terminal\n");
 		break;

@@ -1,7 +1,5 @@
 #include "tests.h"
 
-static t_list	*add_link(t_list *list, void *content);
-
 void	test_ft_lstadd_back_bonus_changeposition(void)
 {
 	t_list	*head;
@@ -40,19 +38,4 @@ void	run_test_ft_lstadd_back_bonus(void)
 	UNITY_BEGIN();
 	RUN_TEST(test_ft_lstadd_back_bonus_changeposition);
 	UNITY_END();
-}
-
-static t_list	*add_link(t_list *list, void *content)
-{
-	t_list	*new;
-
-	if (list == NULL)
-		return (ft_lstnew(content));
-	new = malloc(sizeof(t_list));
-	if (new)
-	{
-		new->content = content;
-		new->next = list;
-	}
-	return (new);
 }

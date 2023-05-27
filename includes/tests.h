@@ -64,6 +64,12 @@ void	run_test_ft_lstadd_front_bonus(void);
 void	run_test_ft_lstsize_bonus(void);
 void	run_test_ft_lstlast_bonus(void);
 void	run_test_ft_lstadd_back_bonus(void);
+void	run_test_ft_lstdelone_bonus(void);
+
+//BONUS auxiliary functions
+t_list	*add_link(t_list *list, void *content);
+typedef void (*delptr)(void *);
+void del_lstcontent(void *content);
 
 enum Tests
 {
