@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:58:41 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/24 01:52:16 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/27 15:32:40 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 // BONUS
-typedef struct	s_list
+typedef struct s_list
 {
-	void	*content;
-	struct	s_list *next;
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 t_list	*ft_lstnew(void *content);

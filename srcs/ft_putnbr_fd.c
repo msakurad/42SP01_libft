@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 23:13:17 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/24 01:01:38 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/27 16:43:02 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,8 @@ static int	ft_abs(int n);
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
-	{
 		ft_putchar_fd('-', fd);
-		if (n != -1)
-			ft_putnbr_fd(ft_abs(n / 10), fd);
-	}
-	if (n / 10 > 0)
+	if (ft_abs(n / 10) > 0)
 		ft_putnbr_fd(ft_abs(n / 10), fd);
 	ft_putchar_fd(ft_abs(n % 10) + '0', fd);
 }

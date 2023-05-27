@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 15:18:25 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/23 15:54:18 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/27 15:31:29 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	ft_count_words(char const *s, char c)
 	count = 0;
 	if (!*s)
 		return (0);
-	while(*s)
+	while (*s)
 	{
 		while (*s == c)
 			s++;

@@ -1,10 +1,10 @@
 #include "tests.h"
 
-void del_lstcontent(void *content)
+// similar to ft_bzero(content);
+void	del_lstcontent(void *content)
 {
-	// similar to ft_bzero(content);
 	unsigned char	*ptr_content;
-	int	n;
+	int				n;
 
 	ptr_content = (unsigned char *)content;
 	n = ft_strlen((char *)ptr_content) + 1;

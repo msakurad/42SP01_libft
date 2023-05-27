@@ -33,25 +33,24 @@ void	test_ft_strncmp_cmpeverything_true(void)
 	TEST_ASSERT_EQUAL_INT(-5, ft_strncmp(str1, str2, 15));
 }
 
+void	test_ft_strncmp_usingextendedasciichar(void)
+{
+	char	*str1;
+	char	*str2;
+
+	str1 = "test\200";
+	str2 = "test\0";
+	printf("\ncomparar %d\n", (unsigned int)ft_strncmp(str1, str2, 6));
+	printf("comparar %c\n", (unsigned int)ft_strncmp(str1, str2, 6));
+	TEST_ASSERT_EQUAL_INT(65, ft_strncmp(str1, str2, 15));
+}
+
 void	run_test_ft_strncmp(void)
 {
 	UNITY_BEGIN();
 	RUN_TEST(test_ft_strncmp_ftvslibc_true);
 	RUN_TEST(test_ft_strncmp_cmponly3chars_true);
 	RUN_TEST(test_ft_strncmp_cmpeverything_true);
+	RUN_TEST(test_ft_strncmp_usingextendedasciichar);
 	UNITY_END();
 }
-
-// void	setUp(void)
-// {
-// }
-
-// void	tearDown(void)
-// {
-// }
-
-// int	main(void)
-// {
-// 	RUN_FT_TEST(00, ft_strncmp)
-// 	return (0);
-// }

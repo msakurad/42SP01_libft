@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 01:33:17 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/20 09:12:17 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/05/27 16:17:02 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
