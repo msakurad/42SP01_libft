@@ -51,25 +51,29 @@ void	test_ft_substr_startisgreaterthans_return_null(void)
 	free(sub_s);
 }
 
+void	test_ft_substr_startiszerobutlenisinfinite_returnshola(void)
+{
+	char	*s;
+	int		start;
+	int		len;
+	char	*sub_s;
+
+	s = "hola";
+	start = 0;
+	len = __INT_MAX__;
+	sub_s = ft_substr(s, start, len);
+	printf("\nInputs: s=%s, start=%d, len=%d\n", s, start, len);
+	printf("sub string: ft %s\n", sub_s);
+	TEST_ASSERT_NULL(sub_s);
+	free(sub_s);
+}
+
 void	run_test_ft_substr(void)
 {
 	UNITY_BEGIN();
 	RUN_TEST(test_ft_substr_normalconditions_true);
 	RUN_TEST(test_ft_substr_lenisgreaterthansubs_return_subs);
 	RUN_TEST(test_ft_substr_startisgreaterthans_return_null);
+	RUN_TEST(test_ft_substr_startiszerobutlenisinfinite_returnshola);
 	UNITY_END();
 }
-
-// void	setUp(void)
-// {
-// }
-
-// void	tearDown(void)
-// {
-// }
-
-// int	main(void)
-// {
-// 	RUN_FT_TEST(00, ft_substr)
-// 	return (0);
-// }
