@@ -6,7 +6,7 @@
 /*   By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:51:37 by msakurad          #+#    #+#             */
-/*   Updated: 2023/05/17 18:25:12 by msakurad         ###   ########.fr       */
+/*   Updated: 2023/06/01 01:56:42 by msakurad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s1++;
 		s1_len--;
 	}
-	while (1)
-	{
-		if (!ft_strchr(set, s1[s1_len - 1]))
-			break ;
+	while (ft_strchr(set, s1[s1_len - 1]) && s1_len)
 		s1_len--;
-	}
-	if (s1_len <= 0)
-		return (ft_strdup(""));
 	s1_trimmed = (char *)malloc(sizeof(char) * (s1_len + 1));
 	if (s1_trimmed == NULL)
 		return (NULL);

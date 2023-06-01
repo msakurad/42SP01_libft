@@ -77,6 +77,22 @@ void	test_ft_strtrim_setwithterminator_resultsunknown(void)
 	free(s_trimmed);
 }
 
+void	test_ft_strtrim_trimoneleftbutnoright(void)
+{
+	char	*s1;
+	char	*set;
+	char	*s_trimmed;
+
+	s1 = "!abacat!e";
+	set = "!xv";
+	s_trimmed = ft_strtrim(s1, set);
+	printf("\nInputs: s1=%s, set=%s\n", s1, set);
+	printf("string trimmed: ft %s\n", s_trimmed);
+	// TEST_IGNORE_MESSAGE("Test with \\0, unsure of the result");
+	TEST_ASSERT_EQUAL_STRING("abacat!e", s_trimmed);
+	free(s_trimmed);
+}
+
 void	run_test_ft_strtrim(void)
 {
 	UNITY_BEGIN();
@@ -85,6 +101,7 @@ void	run_test_ft_strtrim(void)
 	RUN_TEST(test_ft_strtrim_trimonlyiniofs1_trimmeds1);
 	RUN_TEST(test_ft_strtrim_alltrimmed_emptystring);
 	RUN_TEST(test_ft_strtrim_setwithterminator_resultsunknown);
+	RUN_TEST(test_ft_strtrim_trimoneleftbutnoright);
 	UNITY_END();
 }
 
