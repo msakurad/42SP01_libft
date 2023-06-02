@@ -6,7 +6,7 @@
 #    By: msakurad <msakurad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/04 17:25:54 by msakurad          #+#    #+#              #
-#    Updated: 2023/05/30 18:40:37 by msakurad         ###   ########.fr        #
+#    Updated: 2023/06/02 16:15:19 by msakurad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,10 +44,10 @@ bonus: $(OBJ) $(OBJ_BONUS)
 	cc $(CCFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
-	rm -f *.a
+	rm -f $(NAME)
 
 re: fclean all
 
